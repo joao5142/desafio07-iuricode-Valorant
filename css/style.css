@@ -1,0 +1,296 @@
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+
+
+ /**##RESET*/
+ * {
+     box-sizing: border-box;
+     padding: 0px;
+     margin: 0px;
+
+
+ }
+
+ ul,
+ ol {
+     list-style: none;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ img {
+     height: auto;
+ }
+
+ button,
+ input,
+ textarea {
+     border: 0;
+     outline: none;
+ }
+
+ button:focus,
+ input:focus,
+ textarea:focus {
+     border: 0;
+     outline: none;
+ }
+
+ /*##VARIAVEIS*/
+ :root {
+     --white-color: #fff;
+ }
+
+
+ /* ##BODY */
+ body {
+     font-family: 'Open Sans', sans-serif;
+     height: 100vh;
+     background-image: url('../assets/img/background.svg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     overflow: hidden;
+     display: grid;
+     grid-template-areas:
+         'header header header'
+         'main main aside'
+         'footer footer aside';
+     grid-template-rows: 1fr 5fr 1fr;
+     padding-left: 150px;
+
+ }
+
+ /* ##GRID AREA */
+
+ header {
+     grid-area: header;
+ }
+
+ aside {
+     grid-area: aside;
+ }
+
+ main {
+     grid-area: main;
+ }
+
+ footer {
+     grid-area: footer;
+
+
+ }
+
+ /* ##HEADER */
+ header {
+     display: flex;
+     width: 100%;
+     justify-content: space-between;
+     align-items: center;
+     padding-right: 150px;
+ }
+
+ header :nth-child(3) {
+     width: 24px;
+ }
+
+ .subtitle {
+     font-size: 25px;
+     color: var(--white-color);
+     font-weight: 700;
+ }
+
+ /* ##MAIN */
+ main {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: center;
+ }
+
+ .title {
+     font-size: 70px;
+     font-weight: 700;
+     text-transform: uppercase;
+     color: transparent;
+     -webkit-text-stroke-width: 2px;
+     -webkit-text-stroke-color: var(--white-color);
+     margin-bottom: 50px;
+ }
+
+ .box-image :not(img:nth-of-type(1)) {
+     margin-left: 20px;
+ }
+
+ .box-image img {
+     max-width: 170px;
+     min-width: 100px;
+ }
+
+ /* ##ASIDE */
+ aside,
+ aside img {
+     height: calc(100vh - 60px);
+ }
+
+ /* ##FOOTER */
+
+ footer {
+     display: flex;
+     align-items: flex-end;
+     padding-bottom: 30px;
+ }
+
+ footer>* {
+     margin-left: 40px;
+
+ }
+
+ footer :nth-child(1) {
+     margin-left: 0px;
+ }
+
+
+
+ @media (min-width:1000px) and (max-width:1200px) {
+     body {
+         padding: 0px 20px;
+         margin: 0px;
+     }
+
+     header {
+         padding: 0px;
+     }
+
+     .box-image img {
+         max-width: 150px;
+     }
+ }
+
+
+ @media(max-width:1000px) {
+
+     body {
+         padding-left: 40px;
+         grid-template-areas: 'header header header'
+             'main main main'
+             'footer footer footer'
+         ;
+         position: relative;
+     }
+
+     header {
+         padding-right: 40px;
+
+     }
+
+     main {
+         width: 100%;
+         justify-content: center;
+         align-items: center;
+         padding-right: 40px;
+
+     }
+
+     .box-image img {
+         max-width: 140px;
+     }
+
+     aside {
+         display: none;
+     }
+
+     body::after {
+         content: '';
+         background-image: url('../assets/img/phoenix.svg');
+         background-repeat: no-repeat;
+         background-position: bottom;
+         background-size: contain;
+         width: 100vw;
+         height: 90vh;
+         position: absolute;
+         bottom: 0px;
+         z-index: -1;
+         opacity: 0.7;
+         padding: 0px;
+         margin: 0px;
+     }
+
+
+ }
+
+ /* ##MEDIA RESPONSIVE QUERIES */
+ @media(max-width:550px) {
+     body {
+         padding: 0px 10px;
+     }
+
+     header {
+         padding-right: 0px;
+
+     }
+
+     .box-image img {
+         max-width: 120px;
+     }
+
+     main {
+         padding-right: 0px;
+
+     }
+
+     body::after {
+         background-size: contain;
+     }
+ }
+
+
+ @media(max-width:440px) {
+     header {
+         padding: 0px 10px;
+     }
+
+     main .title {
+         font-size: 55px;
+     }
+
+     main .box-image img {
+         width: 70px;
+         max-width: 70px;
+     }
+
+
+     footer {
+         padding-left: 10px;
+     }
+
+     body::after {
+         background-size: cover;
+     }
+ }
+
+ @media(max-width:375px) {
+     header {
+         padding: 0px;
+     }
+
+     main .box-image {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 15px;
+     }
+
+     main .title {
+         font-size: 45px;
+
+     }
+
+     main .box-image img {
+         min-width: 40px;
+
+         max-width: 70px;
+     }
+ }
