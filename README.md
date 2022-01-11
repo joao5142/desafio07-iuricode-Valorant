@@ -1,4 +1,4 @@
-<h1>Desafio 06- Valorant</h1>
+<h1>Desafio 07- Valorant</h1>
 <h4>Desafio Landing Page Valorant desenvolvido com HTML|CSS|Javascript</h4>
 <h2>Tecnologias Utilizadas</h2>
 <div style="display: inline_block">
