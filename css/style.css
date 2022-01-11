@@ -1,15 +1,11 @@
  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 
-
-
  /**##RESET*/
  * {
      box-sizing: border-box;
      padding: 0px;
      margin: 0px;
-
-
  }
 
  ul,
@@ -154,23 +150,12 @@
 
 
 
- @media (min-width:1000px) and (max-width:1200px) {
-     body {
-         padding: 0px 20px;
-         margin: 0px;
-     }
 
-     header {
-         padding: 0px;
-     }
-
-     .box-image img {
-         max-width: 150px;
-     }
- }
+ @media(min-width:1360px) and (max-width:1560px) {}
 
 
- @media(max-width:1000px) {
+
+ @media(max-width:1250px) {
 
      body {
          padding-left: 40px;
@@ -221,7 +206,14 @@
 
  }
 
- /* ##MEDIA RESPONSIVE QUERIES */
+ @media(max-width:800px) {
+     body::after {
+         background-size: contain;
+
+
+     }
+ }
+
  @media(max-width:550px) {
      body {
          padding: 0px 10px;
